@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem-vindo ao Blog do Node </h1>
+  <p class="lead ">Este é BLOG simples, para aprendizado.</p>
+  <hr class="my-4">
+  <P>Aqui você pode ler sobre as novidades no mundo da computação</P>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg " href='#' role="button">Crie uma conta</a>
+  </p>
+</div>
+
+<h3>Postagens Recentes: </h3>
+
+{{#each postagens}}
+<div class="card mt-4">
+  <div class="card-body">
+
+    <h3>{{titulo}}</h3>
+    <p>{{descricao}}</p>
+    <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+    <hr>
+    <small>Categoria: {{categoria.nome}}</small><br>
+    <small>Data de pubicação: {{data}}</small>
+
+  </div>
+</div>
+
+{{else}}
+<h5>Nenhuma postagem </h5>
+{{/each}}
